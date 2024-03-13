@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_StampInfostarkov" xml:space="preserve">
+    <value>Информация о штампе</value>
+  </data>
+  <data name="Action_ShowStampstarkov" xml:space="preserve">
+    <value>Показать штамп</value>
+  </data>
+  <data name="Action_ShowStampstarkovHint" xml:space="preserve">
+    <value>Показать штамп</value>
+  </data>
+  <data name="Action_ShowStampstarkovDescription" xml:space="preserve">
+    <value>Показать штамп</value>
+  </data>
+  <data name="Action_ConvertPageToImagestarkov" xml:space="preserve">
+    <value>Преобразовать страницу документа</value>
+  </data>
+  <data name="Action_ConvertPageToImagestarkovHint" xml:space="preserve">
+    <value>Преобразовать страницу документа</value>
+  </data>
+  <data name="Action_ConvertPageToImagestarkovDescription" xml:space="preserve">
+    <value>Преобразовать страницу документа</value>
+  </data>
+  <data name="Action_PlaceStampstarkov" xml:space="preserve">
+    <value>Проставить штамп</value>
+  </data>
+  <data name="Action_PlaceStampstarkovHint" xml:space="preserve">
+    <value>Проставить штамп</value>
+  </data>
+  <data name="Action_PlaceStampstarkovDescription" xml:space="preserve">
+    <value>Проставить штамп</value>
+  </data>
+  <data name="Ribbon_Stamp_1f3e52ed2cb744bf8f9ae869d22b08c5" xml:space="preserve">
+    <value>Штамп</value>
+  </data>
+  <data name="Ribbon_StampGroup_b30ff61f69a54948973d02e032cfaaf5" xml:space="preserve">
+    <value>Штампы</value>
+  </data>
+  <data name="Form_fc02fa2fd3c94288813fd940842b34be" xml:space="preserve">
+    <value>Штампы</value>
+  </data>
+  <data name="ControlGroup_b80f429b920941119050c8a284981a7f" xml:space="preserve">
+    <value>Основная группа</value>
+  </data>
+</root>

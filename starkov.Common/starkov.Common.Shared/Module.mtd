@@ -1,0 +1,147 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "31cc9825-6fd8-406f-8b9e-314a63b2b6a8",
+  "Name": "Common",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "starkov.Common.Client",
+  "ClientBaseAssemblyName": "starkov.Common.ClientBase",
+  "ClientBaseNamespace": "starkov.Common.ClientBase",
+  "ClientNamespace": "starkov.Common.Client",
+  "Code": "Common",
+  "CompanyCode": "starkov",
+  "Cover": {
+    "NameGuid": "4564db04-9134-4acc-9bf8-20d508245d1c",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "e08cd91d-aed5-4243-8e2f-e447f589d79a",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "c0f8bada-c7dc-460b-9ef9-7737d1094829",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "Dependencies": [
+    {
+      "Id": "ffaeed45-21a9-418f-b8e1-9979907d259b",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "1a77b17a-3ff0-4378-954f-7ca0f4da90a3",
+      "PreviousItemId": "f10c2a91-ab3e-43c3-b3c2-88ead96cb725"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "starkov.Common",
+  "IsolatedAreas": [
+    {
+      "NameGuid": "4efc5867-55dc-40fe-beff-01085a4b521a",
+      "Name": "WorkWithAspose"
+    }
+  ],
+  "IsolatedAssemblyName": "starkov.Common.Isolated",
+  "IsolatedFunctions": [
+    {
+      "NameGuid": "0d053731-bbcc-4f4c-8f64-c16504f98d36",
+      "Name": "AddStampByCoords",
+      "IsolatedAreaId": "4efc5867-55dc-40fe-beff-01085a4b521a",
+      "Parameters": [
+        {
+          "Name": "inputStream",
+          "ParameterType": "global::System.IO.Stream",
+          "ParameterTypeFullName": "System.IO.Stream"
+        },
+        {
+          "Name": "htmlStamp",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "pageNumber",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        },
+        {
+          "Name": "x",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "y",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        }
+      ],
+      "ReturnType": "global::System.IO.Stream",
+      "ReturnTypeFullName": "System.IO.Stream"
+    },
+    {
+      "NameGuid": "1d6c2dfc-f0c3-4864-8ee2-46b68c0d9d0d",
+      "Name": "ConvertFirstPageToImage",
+      "IsolatedAreaId": "4efc5867-55dc-40fe-beff-01085a4b521a",
+      "Parameters": [
+        {
+          "Name": "documentStream",
+          "ParameterType": "global::System.IO.Stream",
+          "ParameterTypeFullName": "System.IO.Stream"
+        }
+      ],
+      "ReturnType": "global::starkov.Common.Structures.Module.IPageInfo",
+      "ReturnTypeFullName": "starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces"
+    }
+  ],
+  "IsolatedNamespace": "starkov.Common.Isolated",
+  "IsVisible": false,
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicStructures": [
+    {
+      "Name": "PageInfo",
+      "IsIsolated": true,
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Base64Image",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IsLandscape",
+          "TypeFullName": "global::System.Boolean"
+        }
+      ],
+      "StructureNamespace": "starkov.Common.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "starkov.Common",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "starkov.Common.Server",
+  "ServerNamespace": "starkov.Common.Server",
+  "SharedAssemblyName": "starkov.Common.Shared",
+  "SharedNamespace": "starkov.Common.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

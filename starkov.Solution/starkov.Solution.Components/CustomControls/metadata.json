@@ -1,0 +1,1 @@
+{"vendorName":"Starkov","componentName":"ReactControls","componentVersion":"1.1","controls":[{"name":"Stamp-control","loaders":[{"name":"stamp-control-loader","scope":"Card"}],"displayNames":[{"locale":"en","name":"Stamp control"},{"locale":"ru","name":"Контрол для отображения штампа"}]}],"publicName":"Starkov_ReactControls_1_1","hostApiVersion":"1.0.0"}

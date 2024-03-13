@@ -1,0 +1,100 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "ffaeed45-21a9-418f-b8e1-9979907d259b",
+  "Name": "Solution",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "starkov.Solution.Client",
+  "ClientBaseAssemblyName": "starkov.Solution.ClientBase",
+  "ClientBaseNamespace": "starkov.Solution.ClientBase",
+  "ClientNamespace": "starkov.Solution.Client",
+  "Code": "Solutio",
+  "CompanyCode": "starkov",
+  "Cover": {
+    "NameGuid": "dfb60f43-8bb6-4e7c-942c-c58e1a45cf6b",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "9984bf99-a006-408b-a163-92870a24b391",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "77192916-1705-4383-aedd-bc803d99a1d9",
+      "BackgroundPosition": "Stretch"
+    },
+    "RemoteControls": [],
+    "Tabs": []
+  },
+  "DesktopViews": [],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "741430bc-4186-4437-b507-d6f4566e3491",
+      "PreviousItemId": "ab6c1966-5060-4716-aa01-0d6c4703b582"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "starkov.Solution",
+  "IsolatedAssemblyName": "starkov.Solution.Isolated",
+  "IsolatedNamespace": "starkov.Solution.Isolated",
+  "OrderedSpecialFolders": [],
+  "PublicStructures": [],
+  "RemoteComponents": [
+    {
+      "NameGuid": "fce8b9f4-83e5-4f89-8bad-f51f25182d73",
+      "Name": "CustomControls",
+      "ComponentVersion": "1.1",
+      "Controls": [
+        {
+          "NameGuid": "8f9c054d-73b7-403d-b8ac-bf729693d7e6",
+          "Name": "Stamp-control",
+          "DisplayNames": [
+            {
+              "NameGuid": "4d456da3-a7e6-4e76-b167-25b467e7d81e",
+              "DisplayName": "Stamp control",
+              "Locale": "en"
+            },
+            {
+              "NameGuid": "83a81bf0-2220-4ad7-8220-4479aeba7c6f",
+              "DisplayName": "Контрол для отображения штампа",
+              "Locale": "ru"
+            }
+          ],
+          "Loaders": [
+            {
+              "NameGuid": "597de79b-6d7e-4fc8-ab4e-d9614bc62a19",
+              "Name": "stamp-control-loader"
+            }
+          ]
+        }
+      ],
+      "HostApiVersion": "1.0.0",
+      "PublicName": "Starkov_ReactControls_1_1"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "starkov.Solution",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "starkov.Solution.Server",
+  "ServerNamespace": "starkov.Solution.Server",
+  "SharedAssemblyName": "starkov.Solution.Shared",
+  "SharedNamespace": "starkov.Solution.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

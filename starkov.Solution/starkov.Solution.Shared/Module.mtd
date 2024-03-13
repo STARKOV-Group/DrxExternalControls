@@ -51,19 +51,19 @@
           "Name": "Stamp-control",
           "DisplayNames": [
             {
-              "NameGuid": "4d456da3-a7e6-4e76-b167-25b467e7d81e",
+              "NameGuid": "3e563370-3e94-4a0d-bc86-2553326cd003",
               "DisplayName": "Stamp control",
               "Locale": "en"
             },
             {
-              "NameGuid": "83a81bf0-2220-4ad7-8220-4479aeba7c6f",
+              "NameGuid": "44626eb3-be57-4f13-84e2-c7951929b728",
               "DisplayName": "Контрол для отображения штампа",
               "Locale": "ru"
             }
           ],
           "Loaders": [
             {
-              "NameGuid": "597de79b-6d7e-4fc8-ab4e-d9614bc62a19",
+              "NameGuid": "52cde18d-0772-443f-8732-e6686cea1ca0",
               "Name": "stamp-control-loader"
             }
           ]

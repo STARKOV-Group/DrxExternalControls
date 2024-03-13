@@ -21,10 +21,10 @@ namespace starkov.Common.Isolated.WorkWithAspose
     [Public]
     public virtual IPageInfo ConvertFirstPageToImage(Stream documentStream)
     {
-      var result = PageInfo.Create();
-      byte[] bytes;
       try
       {
+        var result = PageInfo.Create();
+        byte[] bytes;
         
         using (var memoryStream = new MemoryStream())
         {

@@ -61,16 +61,13 @@
   <data name="Property_CoordX" xml:space="preserve">
     <value>Coord X</value>
   </data>
-  <data name="Property_IsLandscape" xml:space="preserve">
-    <value>Is landscape</value>
-  </data>
   <data name="Property_CoordY" xml:space="preserve">
     <value>Coord Y</value>
   </data>
   <data name="Property_StampHtml" xml:space="preserve">
     <value>Stamp Html</value>
   </data>
-  <data name="Property_FirstPageAsImage" xml:space="preserve">
-    <value>First page as image</value>
+  <data name="Property_PageNumber" xml:space="preserve">
+    <value>Page number</value>
   </data>
 </root>

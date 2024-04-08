@@ -137,8 +137,35 @@
       "Name": "StampInfostarkov",
       "Code": "OfficialDocume",
       "EntityGuid": "1180462e-8825-4312-9346-25982ea5021b",
+      "IsEnabled": false,
       "IsShowedInList": false,
+      "IsVisibility": false,
       "PreviousPropertyGuid": "c74d8054-d16d-43c5-a826-ae982cbde6db"
+    },
+    {
+      "$type": "Sungero.Metadata.BinaryDataPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c59b22e1-88ba-420a-89f0-aede2d8bb400",
+      "Name": "Pagesstarkov",
+      "CanBeSearch": false,
+      "Code": "Pagesstar",
+      "InterfaceOfComponentFullTypeName": "Sungero.Domain.Shared.IBinaryData, Sungero.Domain.Shared, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null",
+      "IsEnabled": false,
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "PreviousPropertyGuid": "7c55283c-0e87-4c82-834e-cfdf1fcaeed5"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "1a5ce69b-0f56-46b3-99d5-841e75fea28a",
+      "Name": "IsLandscapestarkov",
+      "CanBeSearch": false,
+      "Code": "IsLandscapesta",
+      "IsEnabled": false,
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "c59b22e1-88ba-420a-89f0-aede2d8bb400",
+      "Versions": []
     }
   ],
   "PublicStructures": [],

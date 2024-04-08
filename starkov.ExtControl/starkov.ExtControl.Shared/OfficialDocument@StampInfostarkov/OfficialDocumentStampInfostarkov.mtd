@@ -20,20 +20,13 @@
       "IsShowedInList": false
     },
     {
-      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "82c9d0ab-34fa-4eb0-8150-4314ce14681f",
-      "Name": "IsLandscape",
-      "CanBeSearch": false,
-      "Code": "IsLandscape",
-      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
-      "PreviousPropertyGuid": "c85c7ff5-b405-4e7a-af9e-90d935a9855c"
-    },
-    {
       "$type": "Sungero.Metadata.DoublePropertyMetadata, Sungero.Metadata",
       "NameGuid": "dbc4bbb4-9675-4f35-b7f8-efbf46cca3d9",
       "Name": "CoordX",
       "CanBeSearch": false,
       "Code": "CoordX",
+      "IsShowedInList": false,
+      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "82c9d0ab-34fa-4eb0-8150-4314ce14681f"
     },
@@ -43,6 +36,8 @@
       "Name": "CoordY",
       "CanBeSearch": false,
       "Code": "CoordY",
+      "IsShowedInList": false,
+      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "dbc4bbb4-9675-4f35-b7f8-efbf46cca3d9"
     },
@@ -52,16 +47,23 @@
       "Name": "StampHtml",
       "CanBeSearch": false,
       "Code": "StampHtml",
+      "IsEnabled": false,
+      "IsShowedInList": false,
+      "IsSortingAllowed": false,
+      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultilineStringEditorToTextBinder",
       "PreviousPropertyGuid": "7ef4296e-0294-4be3-9c16-3a06d332b55e"
     },
     {
-      "$type": "Sungero.Metadata.TextPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "3bc31a1d-6708-4519-8f73-6e2ddae73c20",
-      "Name": "FirstPageAsImage",
+      "$type": "Sungero.Metadata.IntegerPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "6a1b592e-0f5b-414d-a8ff-4d213948c72e",
+      "Name": "PageNumber",
       "CanBeSearch": false,
-      "Code": "FirstPageAsIma",
-      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultilineStringEditorToTextBinder",
+      "Code": "PageNumber",
+      "IsEnabled": false,
+      "IsShowedInList": false,
+      "IsSortingAllowed": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "2bbda13a-81a9-4d87-a9af-6f43e577c1f2"
     }
   ],

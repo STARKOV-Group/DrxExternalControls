@@ -100,4 +100,10 @@
   <data name="ControlGroup_b80f429b920941119050c8a284981a7f" xml:space="preserve">
     <value>Основная группа</value>
   </data>
+  <data name="Property_Pagesstarkov" xml:space="preserve">
+    <value>Страницы</value>
+  </data>
+  <data name="Property_IsLandscapestarkov" xml:space="preserve">
+    <value>Признак альбомной ориентации</value>
+  </data>
 </root>

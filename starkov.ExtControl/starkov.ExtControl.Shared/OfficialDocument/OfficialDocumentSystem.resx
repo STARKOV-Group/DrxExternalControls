@@ -118,4 +118,10 @@
   <data name="ControlGroup_b80f429b920941119050c8a284981a7f" xml:space="preserve">
     <value>Main group</value>
   </data>
+  <data name="Property_Pagesstarkov" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="Property_IsLandscapestarkov" xml:space="preserve">
+    <value>Is landscape</value>
+  </data>
 </root>

@@ -58,11 +58,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Property_FirstPageAsImage" xml:space="preserve">
-    <value>Первая страница в виде изображения</value>
-  </data>
-  <data name="Property_IsLandscape" xml:space="preserve">
-    <value>Признак альбомной ориентации</value>
+  <data name="Property_PageNumber" xml:space="preserve">
+    <value>Номер страницы</value>
   </data>
   <data name="Property_CoordX" xml:space="preserve">
     <value>Координата X</value>

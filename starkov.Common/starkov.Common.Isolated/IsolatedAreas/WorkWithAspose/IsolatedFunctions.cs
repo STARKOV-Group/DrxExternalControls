@@ -37,7 +37,7 @@ namespace starkov.Common.Isolated.WorkWithAspose
             memoryStream.Position = 0;
             
             var pageInfo = PageInfo.Create();
-            pageInfo.Image = Convert.ToBase64String(memoryStream.ToArray());
+            pageInfo.Image = memoryStream.ToArray();
             pageInfo.IsLandscape = pageWidth > pageHeight;
             result.Add(pageInfo);
           }

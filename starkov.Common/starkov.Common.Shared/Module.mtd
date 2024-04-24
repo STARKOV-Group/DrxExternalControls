@@ -107,8 +107,8 @@
       "Properties": [
         {
           "Name": "Image",
-          "IsNullable": true,
-          "TypeFullName": "global::System.String"
+          "IsArray": true,
+          "TypeFullName": "global::System.Byte[]"
         },
         {
           "Name": "IsLandscape",

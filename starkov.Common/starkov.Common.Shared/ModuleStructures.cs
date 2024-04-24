@@ -10,7 +10,7 @@ namespace starkov.Common.Structures.Module
   [Public(Isolated=true)]
   partial class PageInfo
   {
-    public string Image { get; set; }
+    public byte[] Image { get; set; }
     public bool IsLandscape { get; set; }
   }
 }

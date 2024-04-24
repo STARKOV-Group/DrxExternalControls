@@ -80,8 +80,8 @@
       "ReturnTypeFullName": "System.IO.Stream"
     },
     {
-      "NameGuid": "1d6c2dfc-f0c3-4864-8ee2-46b68c0d9d0d",
-      "Name": "ConvertFirstPageToImage",
+      "NameGuid": "8061e8fd-30b6-4635-b30d-c6665a3d9ee7",
+      "Name": "ConvertPagesToImage",
       "IsolatedAreaId": "4efc5867-55dc-40fe-beff-01085a4b521a",
       "Parameters": [
         {
@@ -90,8 +90,8 @@
           "ParameterTypeFullName": "System.IO.Stream"
         }
       ],
-      "ReturnType": "global::starkov.Common.Structures.Module.IPageInfo",
-      "ReturnTypeFullName": "starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces"
+      "ReturnType": "global::System.Collections.Generic.List<global::starkov.Common.Structures.Module.IPageInfo>",
+      "ReturnTypeFullName": "System.Collections.Generic.List`1[[starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces]]"
     }
   ],
   "IsolatedNamespace": "starkov.Common.Isolated",
@@ -106,7 +106,7 @@
       "IsPublic": true,
       "Properties": [
         {
-          "Name": "Base64Image",
+          "Name": "Image",
           "IsNullable": true,
           "TypeFullName": "global::System.String"
         },

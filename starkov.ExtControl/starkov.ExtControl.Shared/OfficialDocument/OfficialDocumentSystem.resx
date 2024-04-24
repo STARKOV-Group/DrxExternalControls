@@ -121,7 +121,4 @@
   <data name="Property_Pagesstarkov" xml:space="preserve">
     <value>Pages</value>
   </data>
-  <data name="Property_IsLandscapestarkov" xml:space="preserve">
-    <value>Is landscape</value>
-  </data>
 </root>

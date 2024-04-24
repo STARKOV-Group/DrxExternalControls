@@ -41,7 +41,7 @@ namespace starkov.ExtControl.Client
         return;
       }
       
-      Functions.OfficialDocument.Remote.ConvertPageToImage(_obj);
+      Functions.OfficialDocument.Remote.ConvertPagesToImage(_obj);
     }
 
     public virtual bool CanConvertPageToImagestarkov(Sungero.Domain.Client.CanExecuteActionArgs e)

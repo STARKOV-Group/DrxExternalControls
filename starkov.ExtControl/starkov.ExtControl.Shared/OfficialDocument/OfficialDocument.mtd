@@ -82,14 +82,14 @@
         },
         {
           "$type": "Sungero.Metadata.RemoteControlFormMetadata, Sungero.Metadata",
-          "NameGuid": "66f1b7ab-5382-4259-b956-44f4bf59871d",
-          "Name": "StampRemoteControl",
+          "NameGuid": "c64b7554-6e0f-46f1-93be-bbbc4140c094",
+          "Name": "RemoteControlstarkov",
           "ColumnNumber": 0,
           "ColumnSpan": 1,
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.RemoteControlBinder",
           "HeaderLocation": "None",
           "ParentGuid": "b80f429b-9209-4111-9050-c8a284981a7f",
-          "RemoteControlGuid": "8f9c054d-73b7-403d-b8ac-bf729693d7e6",
+          "RemoteControlGuid": "28585076-fd89-46f0-829d-5c3cd7e0f930",
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": [
@@ -137,35 +137,20 @@
       "Name": "StampInfostarkov",
       "Code": "OfficialDocume",
       "EntityGuid": "1180462e-8825-4312-9346-25982ea5021b",
-      "IsEnabled": false,
+      "HandledEvents": [
+        "AddedShared"
+      ],
       "IsShowedInList": false,
-      "IsVisibility": false,
       "PreviousPropertyGuid": "c74d8054-d16d-43c5-a826-ae982cbde6db"
     },
     {
-      "$type": "Sungero.Metadata.BinaryDataPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "c59b22e1-88ba-420a-89f0-aede2d8bb400",
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "dcd7db91-5bca-46b6-968c-8e7245050e72",
       "Name": "Pagesstarkov",
-      "CanBeSearch": false,
-      "Code": "Pagesstar",
-      "InterfaceOfComponentFullTypeName": "Sungero.Domain.Shared.IBinaryData, Sungero.Domain.Shared, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null",
-      "IsEnabled": false,
+      "Code": "OfficialDocum1",
+      "EntityGuid": "4565262d-024e-4497-b0e8-0d14fb8a7723",
       "IsShowedInList": false,
-      "IsVisibility": false,
       "PreviousPropertyGuid": "7c55283c-0e87-4c82-834e-cfdf1fcaeed5"
-    },
-    {
-      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "1a5ce69b-0f56-46b3-99d5-841e75fea28a",
-      "Name": "IsLandscapestarkov",
-      "CanBeSearch": false,
-      "Code": "IsLandscapesta",
-      "IsEnabled": false,
-      "IsShowedInList": false,
-      "IsVisibility": false,
-      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
-      "PreviousPropertyGuid": "c59b22e1-88ba-420a-89f0-aede2d8bb400",
-      "Versions": []
     }
   ],
   "PublicStructures": [],

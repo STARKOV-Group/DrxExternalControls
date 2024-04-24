@@ -25,8 +25,6 @@
       "Name": "CoordX",
       "CanBeSearch": false,
       "Code": "CoordX",
-      "IsShowedInList": false,
-      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "82c9d0ab-34fa-4eb0-8150-4314ce14681f"
     },
@@ -36,8 +34,6 @@
       "Name": "CoordY",
       "CanBeSearch": false,
       "Code": "CoordY",
-      "IsShowedInList": false,
-      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "dbc4bbb4-9675-4f35-b7f8-efbf46cca3d9"
     },
@@ -47,10 +43,7 @@
       "Name": "StampHtml",
       "CanBeSearch": false,
       "Code": "StampHtml",
-      "IsEnabled": false,
-      "IsShowedInList": false,
       "IsSortingAllowed": false,
-      "IsVisibility": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultilineStringEditorToTextBinder",
       "PreviousPropertyGuid": "7ef4296e-0294-4be3-9c16-3a06d332b55e"
     },
@@ -60,8 +53,6 @@
       "Name": "PageNumber",
       "CanBeSearch": false,
       "Code": "PageNumber",
-      "IsEnabled": false,
-      "IsShowedInList": false,
       "IsSortingAllowed": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "2bbda13a-81a9-4d87-a9af-6f43e577c1f2"

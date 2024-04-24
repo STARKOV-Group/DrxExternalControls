@@ -14,33 +14,35 @@ namespace starkov.Common.Isolated.WorkWithAspose
   {
 
     /// <summary>
-    /// Преобразование первой страницы документа в изображение.
+    /// Преобразование страниц документа в изображения.
     /// </summary>
     /// <param name="documentStream">Поток документа.</param>
-    /// <returns>Изображение в формате base64.</returns>
+    /// <returns>Изображения в формате base64.</returns>
     [Public]
-    public virtual IPageInfo ConvertFirstPageToImage(Stream documentStream)
+    public virtual List<IPageInfo> ConvertPagesToImage(Stream documentStream)
     {
       try
       {
-        var result = PageInfo.Create();
-        byte[] bytes;
-        
+        var result = new List<IPageInfo>();
         using (var memoryStream = new MemoryStream())
         {
           var document = new Aspose.Pdf.Document(documentStream);
           var info = new Aspose.Pdf.Facades.PdfFileInfo(document);
-          var page = document.Pages.FirstOrDefault(p => p.Number == 1);
-          var pageWidth = Convert.ToInt32(info.GetPageWidth(page.Number));
-          var pageHeight = Convert.ToInt32(info.GetPageHeight(page.Number));
-          var pngDevice = new Aspose.Pdf.Devices.PngDevice();
-          pngDevice.Process(page, memoryStream);
-          memoryStream.Position = 0;
-          bytes = memoryStream.ToArray();
-          result.IsLandscape = pageWidth > pageHeight;
+          foreach (var page in document.Pages)
+          {
+            var pageWidth = Convert.ToInt32(info.GetPageWidth(page.Number));
+            var pageHeight = Convert.ToInt32(info.GetPageHeight(page.Number));
+            var pngDevice = new Aspose.Pdf.Devices.PngDevice();
+            pngDevice.Process(page, memoryStream);
+            memoryStream.Position = 0;
+            
+            var pageInfo = PageInfo.Create();
+            pageInfo.Image = Convert.ToBase64String(memoryStream.ToArray());
+            pageInfo.IsLandscape = pageWidth > pageHeight;
+            result.Add(pageInfo);
+          }
         }
         
-        result.Base64Image = Convert.ToBase64String(bytes);
         return result;
       }
       catch (Exception ex)

@@ -39,7 +39,7 @@ namespace starkov.ExtControl.Server
     /// Преобразовать первую страницу документа в изображение.
     /// </summary>
     [Remote]
-    public virtual void ConvertPageToImage()
+    public virtual void ConvertPagesToImage()
     {
       var version = _obj.LastVersion;
       if (version == null)
@@ -49,9 +49,15 @@ namespace starkov.ExtControl.Server
       using (var bodyStream = version.Body.Read())
         using (var pdfStream = Sungero.Docflow.IsolatedFunctions.PdfConverter.GeneratePdf(bodyStream, version.BodyAssociatedApplication.Extension))
       {
-        var convertResult = Common.IsolatedFunctions.WorkWithAspose.ConvertFirstPageToImage(pdfStream);
-        stampInfo.FirstPageAsImage = convertResult.Base64Image;
-        stampInfo.IsLandscape = convertResult.IsLandscape;
+        _obj.Pagesstarkov.Clear();
+        var num = 1;
+        foreach (var pageInfo in Common.IsolatedFunctions.WorkWithAspose.ConvertPagesToImage(pdfStream))
+        {
+          var row = _obj.Pagesstarkov.AddNew();
+          row.Page = pageInfo.Image;
+          row.Number = num++;
+          row.IsLandscape = pageInfo.IsLandscape;
+        }
         stampInfo.CoordX = 0;
         stampInfo.CoordY = 0;
       }
@@ -64,13 +70,19 @@ namespace starkov.ExtControl.Server
     [Remote]
     public virtual void FillStampHtml()
     {
-      var stampInfo = _obj.StampInfostarkov.FirstOrDefault() ?? _obj.StampInfostarkov.AddNew();
-      var stamp = Sungero.Docflow.PublicFunctions.Module.GetSignatureMarkAsHtml(_obj, _obj.LastVersion?.Id ?? 0);
-      if (stampInfo.StampHtml != stamp)
-      {
-        stampInfo.StampHtml = stamp;
-        _obj.Save();
-      }
+      var stampInfo = _obj.StampInfostarkov.AddNew();
+      var stampParams = Sungero.Docflow.PublicFunctions.Module.GetDefaultSignatureStampParams(false);
+      var stamp = Sungero.Docflow.Resources.HtmlStampTemplateForSignature.ToString();
+      stamp = stamp.Replace("{SignatoryFullName}", "Подписывающий");
+      stamp = stamp.Replace("{SignatoryId}", "1");
+      stamp = stamp.Replace("{Logo}", stampParams.Logo);
+      stamp = stamp.Replace("{SigningDate}", Calendar.Today.ToShortDateString());
+      stamp = stamp.Replace("{Title}", stampParams.Title);
+      
+      stampInfo.PageNumber = 1;
+      stampInfo.CoordX = 0;
+      stampInfo.CoordY = 0;
+      stampInfo.StampHtml = stamp;
     }
 
   }

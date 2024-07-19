@@ -36,35 +36,6 @@ namespace starkov.ExtControl.Server
     }
     
     /// <summary>
-    /// Преобразовать первую страницу документа в изображение.
-    /// </summary>
-    [Remote]
-    public virtual void ConvertPagesToImage()
-    {
-      var version = _obj.LastVersion;
-      if (version == null)
-        return;
-      
-      var stampInfo = _obj.StampInfostarkov.FirstOrDefault() ?? _obj.StampInfostarkov.AddNew();
-      using (var bodyStream = version.Body.Read())
-        using (var pdfStream = Sungero.Docflow.IsolatedFunctions.PdfConverter.GeneratePdf(bodyStream, version.BodyAssociatedApplication.Extension))
-      {
-        _obj.Pagesstarkov.Clear();
-        var num = 1;
-        foreach (var pageInfo in Common.IsolatedFunctions.WorkWithAspose.ConvertPagesToImage(pdfStream))
-        {
-          var row = _obj.Pagesstarkov.AddNew();
-          row.Page = pageInfo.Image;
-          row.Number = num++;
-          row.IsLandscape = pageInfo.IsLandscape;
-        }
-        stampInfo.CoordX = 0;
-        stampInfo.CoordY = 0;
-      }
-      _obj.Save();
-    }
-    
-    /// <summary>
     /// Заполнить данные о штампе в виде строки Html.
     /// </summary>
     [Remote]

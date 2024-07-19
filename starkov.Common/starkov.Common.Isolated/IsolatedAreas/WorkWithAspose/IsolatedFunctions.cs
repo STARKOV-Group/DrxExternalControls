@@ -47,7 +47,74 @@ namespace starkov.Common.Isolated.WorkWithAspose
       }
       catch (Exception ex)
       {
-        Logger.Error("ConvertFirstPageToImage", ex);
+        Logger.Error("ConvertPagesToImage", ex);
+        throw new AppliedCodeException(ex.Message);
+      }
+      finally
+      {
+        documentStream.Dispose();
+      }
+    }
+    
+    /// <summary>
+    /// Преобразование страницы документа в изображение.
+    /// </summary>
+    /// <param name="documentStream">Поток документа.</param>
+    /// <param name="pageNum">Номер страницы.</param>
+    /// <returns>Изображение в формате base64.</returns>
+    [Public]
+    public virtual IPageInfo ConvertPageToImage(Stream documentStream, int pageNum)
+    {
+      try
+      {
+        var result = PageInfo.Create();
+        using (var memoryStream = new MemoryStream())
+        {
+          var document = new Aspose.Pdf.Document(documentStream);
+          var info = new Aspose.Pdf.Facades.PdfFileInfo(document);
+          var page = document.Pages.FirstOrDefault(_ => _.Number == pageNum);
+          var pageWidth = Convert.ToInt32(info.GetPageWidth(pageNum));
+          var pageHeight = Convert.ToInt32(info.GetPageHeight(pageNum));
+          var pngDevice = new Aspose.Pdf.Devices.PngDevice();
+          pngDevice.Process(page, memoryStream);
+          memoryStream.Position = 0;
+          
+          result.Image = memoryStream.ToArray();
+          result.IsLandscape = pageWidth > pageHeight;
+        }
+        
+        return result;
+      }
+      catch (Exception ex)
+      {
+        Logger.Error("ConvertPageToImage", ex);
+        throw new AppliedCodeException(ex.Message);
+      }
+      finally
+      {
+        documentStream.Dispose();
+      }
+    }
+    
+    /// <summary>
+    /// Общее кол-во страниц.
+    /// </summary>
+    /// <param name="documentStream">Поток документа.</param>
+    /// <returns>Общее кол-во страниц.</returns>
+    [Public]
+    public virtual int GetPagesCount(Stream documentStream)
+    {
+      try
+      {
+        using (var memoryStream = new MemoryStream())
+        {
+          var document = new Aspose.Pdf.Document(documentStream);
+          return document.Pages.Count();
+        }
+      }
+      catch (Exception ex)
+      {
+        Logger.Error("GetPagesCount", ex);
         throw new AppliedCodeException(ex.Message);
       }
       finally

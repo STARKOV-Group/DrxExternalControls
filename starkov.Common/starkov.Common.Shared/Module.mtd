@@ -41,6 +41,10 @@
     {
       "NameGuid": "4efc5867-55dc-40fe-beff-01085a4b521a",
       "Name": "WorkWithAspose"
+    },
+    {
+      "NameGuid": "63469c13-afd3-4c80-b054-af05f2702850",
+      "Name": "Json"
     }
   ],
   "IsolatedAssemblyName": "starkov.Common.Isolated",
@@ -92,12 +96,106 @@
       ],
       "ReturnType": "global::System.Collections.Generic.List<global::starkov.Common.Structures.Module.IPageInfo>",
       "ReturnTypeFullName": "System.Collections.Generic.List`1[[starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces]]"
+    },
+    {
+      "NameGuid": "3b911028-99db-4fea-9753-d013bd50e5cb",
+      "Name": "ConvertPageToImage",
+      "IsolatedAreaId": "4efc5867-55dc-40fe-beff-01085a4b521a",
+      "Parameters": [
+        {
+          "Name": "documentStream",
+          "ParameterType": "global::System.IO.Stream",
+          "ParameterTypeFullName": "System.IO.Stream"
+        },
+        {
+          "Name": "pageNum",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::starkov.Common.Structures.Module.IPageInfo",
+      "ReturnTypeFullName": "starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "d1a5f44d-7906-4381-8bab-5e42febdd5a6",
+      "Name": "DeserializePageStruct",
+      "IsolatedAreaId": "63469c13-afd3-4c80-b054-af05f2702850",
+      "Parameters": [
+        {
+          "Name": "jsonData",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::starkov.Common.Structures.Module.IPageInfo",
+      "ReturnTypeFullName": "starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "3a1e1546-1b1d-4b5a-a13f-aff3cfafc213",
+      "Name": "GetPagesCount",
+      "IsolatedAreaId": "4efc5867-55dc-40fe-beff-01085a4b521a",
+      "Parameters": [
+        {
+          "Name": "documentStream",
+          "ParameterType": "global::System.IO.Stream",
+          "ParameterTypeFullName": "System.IO.Stream"
+        }
+      ],
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32"
+    },
+    {
+      "NameGuid": "93fee76f-aa99-47a4-bced-4b0481565375",
+      "Name": "SerializePageStruct",
+      "IsolatedAreaId": "63469c13-afd3-4c80-b054-af05f2702850",
+      "Parameters": [
+        {
+          "Name": "data",
+          "ParameterType": "global::starkov.Common.Structures.Module.IPageInfo",
+          "ParameterTypeFullName": "starkov.Common.Structures.Module.IPageInfo, Sungero.Domain.Interfaces"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
     }
   ],
   "IsolatedNamespace": "starkov.Common.Isolated",
   "IsVisible": false,
   "Overridden": [
     "IsVisible"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetDocumentPage",
+      "Parameters": [
+        {
+          "Name": "docId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        },
+        {
+          "Name": "pageNum",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String",
+      "WebApiRequestType": "Get"
+    },
+    {
+      "Name": "GetDocumentPageCount",
+      "Parameters": [
+        {
+          "Name": "docId",
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
+        }
+      ],
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32",
+      "WebApiRequestType": "Get"
+    }
   ],
   "PublicStructures": [
     {

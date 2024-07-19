@@ -32,23 +32,6 @@ namespace starkov.ExtControl.Client
       return !_obj.State.IsInserted && _obj.AccessRights.CanUpdate();
     }
 
-    public virtual void ConvertPageToImagestarkov(Sungero.Domain.Client.ExecuteActionArgs e)
-    {
-      var version = _obj.LastVersion;
-      if (version == null)
-      {
-        e.AddError("Документ не содержит версий");
-        return;
-      }
-      
-      Functions.OfficialDocument.Remote.ConvertPagesToImage(_obj);
-    }
-
-    public virtual bool CanConvertPageToImagestarkov(Sungero.Domain.Client.CanExecuteActionArgs e)
-    {
-      return !_obj.State.IsInserted && _obj.AccessRights.CanUpdate();
-    }
-
     public virtual void ShowStampstarkov(Sungero.Domain.Client.ExecuteActionArgs e)
     {
       Functions.OfficialDocument.Remote.FillStampHtml(_obj);

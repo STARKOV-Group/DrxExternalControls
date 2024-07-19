@@ -42,28 +42,28 @@
   "PublicStructures": [],
   "RemoteComponents": [
     {
-      "NameGuid": "d904ab96-bdad-4fd4-8214-ffef901f32d1",
+      "NameGuid": "5c0e3334-ae89-4655-901e-4a65abedbf43",
       "Name": "StampControl",
       "ComponentVersion": "1.1",
       "Controls": [
         {
-          "NameGuid": "28585076-fd89-46f0-829d-5c3cd7e0f930",
+          "NameGuid": "f4a55b3c-3d5c-4c87-b7f9-c1579981af3d",
           "Name": "Stamp-control",
           "DisplayNames": [
             {
-              "NameGuid": "0e87a46d-88bb-4570-b036-452c516b9ff9",
+              "NameGuid": "5c59cdd3-c454-4f68-874e-a9289b5e561e",
               "DisplayName": "Контрол для отображения штампа",
               "Locale": "ru"
             },
             {
-              "NameGuid": "12b7b3b6-7370-48b0-b673-f4f2698e29bd",
+              "NameGuid": "726373e5-e7b0-4cf9-b15e-51b82a320a16",
               "DisplayName": "Stamp control",
               "Locale": "en"
             }
           ],
           "Loaders": [
             {
-              "NameGuid": "bc0284f4-8fc3-4e4e-abde-9d4cb02e938e",
+              "NameGuid": "30a696cc-3179-484e-97c2-5b5ef4b118fe",
               "Name": "stamp-control-loader"
             }
           ]

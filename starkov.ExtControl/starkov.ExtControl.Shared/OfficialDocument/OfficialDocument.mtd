@@ -13,14 +13,6 @@
       "SmallIconName": null
     },
     {
-      "NameGuid": "c8b664de-605c-4f75-bad4-5446e03d52ca",
-      "Name": "ConvertPageToImagestarkov",
-      "ActionArea": "Card",
-      "GenerateHandler": true,
-      "LargeIconName": null,
-      "SmallIconName": null
-    },
-    {
       "NameGuid": "ca67464a-3f84-431a-812a-b7fbed386dfe",
       "Name": "PlaceStampstarkov",
       "ActionArea": "Card",
@@ -82,14 +74,14 @@
         },
         {
           "$type": "Sungero.Metadata.RemoteControlFormMetadata, Sungero.Metadata",
-          "NameGuid": "c64b7554-6e0f-46f1-93be-bbbc4140c094",
+          "NameGuid": "264d340e-b4b3-4456-9ca6-0427fb1ca983",
           "Name": "RemoteControlstarkov",
           "ColumnNumber": 0,
           "ColumnSpan": 1,
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.RemoteControlBinder",
           "HeaderLocation": "None",
           "ParentGuid": "b80f429b-9209-4111-9050-c8a284981a7f",
-          "RemoteControlGuid": "28585076-fd89-46f0-829d-5c3cd7e0f930",
+          "RemoteControlGuid": "f4a55b3c-3d5c-4c87-b7f9-c1579981af3d",
           "RowNumber": 0,
           "RowSpan": 1,
           "Settings": [
@@ -142,15 +134,6 @@
       ],
       "IsShowedInList": false,
       "PreviousPropertyGuid": "c74d8054-d16d-43c5-a826-ae982cbde6db"
-    },
-    {
-      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
-      "NameGuid": "dcd7db91-5bca-46b6-968c-8e7245050e72",
-      "Name": "Pagesstarkov",
-      "Code": "OfficialDocum1",
-      "EntityGuid": "4565262d-024e-4497-b0e8-0d14fb8a7723",
-      "IsShowedInList": false,
-      "PreviousPropertyGuid": "7c55283c-0e87-4c82-834e-cfdf1fcaeed5"
     }
   ],
   "PublicStructures": [],
@@ -160,15 +143,6 @@
     "Name": "RibbonCard",
     "Categories": [],
     "Elements": [
-      {
-        "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
-        "NameGuid": "0be97d71-dc42-43fc-b0a2-9562dc5cabfa",
-        "Name": "ConvertPageToImagestarkovstarkov",
-        "ActionGuid": "c8b664de-605c-4f75-bad4-5446e03d52ca",
-        "ButtonSize": "Large",
-        "Index": -1,
-        "ParentGuid": "b30ff61f-69a5-4948-973d-02e032cfaaf5"
-      },
       {
         "$type": "Sungero.Metadata.RibbonActionButtonMetadata, Sungero.Metadata",
         "NameGuid": "0d1f61e2-28cf-4234-9c0e-632a223ba7d8",

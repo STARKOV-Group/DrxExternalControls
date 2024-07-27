@@ -6,7 +6,7 @@
   "Actions": [
     {
       "NameGuid": "07e76c41-90f5-4901-bb26-c4ad42dc809f",
-      "Name": "ShowStampstarkov",
+      "Name": "AddStampstarkov",
       "ActionArea": "Card",
       "GenerateHandler": true,
       "LargeIconName": null,
@@ -14,7 +14,7 @@
     },
     {
       "NameGuid": "ca67464a-3f84-431a-812a-b7fbed386dfe",
-      "Name": "PlaceStampstarkov",
+      "Name": "ConvertToPDFstarkov",
       "ActionArea": "Card",
       "GenerateHandler": true,
       "LargeIconName": null,

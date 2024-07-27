@@ -38,22 +38,25 @@ namespace starkov.ExtControl.Server
     /// <summary>
     /// Заполнить данные о штампе в виде строки Html.
     /// </summary>
+    /// <param name="pageNum">Номер страницы.</param>
+    /// <param name="recipient">Подписывающий.</param>
     [Remote]
-    public virtual void FillStampHtml()
+    public virtual void FillStampHtml(int pageNum, Sungero.CoreEntities.IRecipient recipient)
     {
       var stampInfo = _obj.StampInfostarkov.AddNew();
       var stampParams = Sungero.Docflow.PublicFunctions.Module.GetDefaultSignatureStampParams(false);
       var stamp = Sungero.Docflow.Resources.HtmlStampTemplateForSignature.ToString();
-      stamp = stamp.Replace("{SignatoryFullName}", "Подписывающий");
-      stamp = stamp.Replace("{SignatoryId}", "1");
+      stamp = stamp.Replace("{SignatoryFullName}", recipient.Name);
+      stamp = stamp.Replace("{SignatoryId}", recipient.Id.ToString());
       stamp = stamp.Replace("{Logo}", stampParams.Logo);
       stamp = stamp.Replace("{SigningDate}", Calendar.Today.ToShortDateString());
       stamp = stamp.Replace("{Title}", stampParams.Title);
       
-      stampInfo.PageNumber = 1;
-      stampInfo.CoordX = 0;
-      stampInfo.CoordY = 0;
+      stampInfo.PageNumber = pageNum;
+      stampInfo.CoordX = 1;
+      stampInfo.CoordY = 1;
       stampInfo.StampHtml = stamp;
+      stampInfo.Signer = recipient;
     }
 
   }

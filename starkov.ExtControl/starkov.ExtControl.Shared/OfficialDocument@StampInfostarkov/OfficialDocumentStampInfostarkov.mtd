@@ -56,6 +56,16 @@
       "IsSortingAllowed": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "2bbda13a-81a9-4d87-a9af-6f43e577c1f2"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "59d3cdd4-3141-40e7-b8f1-4038f7db659a",
+      "Name": "Signer",
+      "CanBeSearch": false,
+      "Code": "Signer",
+      "EntityGuid": "c612fc41-44a3-428b-a97c-433c333d78e9",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "6a1b592e-0f5b-414d-a8ff-4d213948c72e"
     }
   ],
   "PublicStructures": [],

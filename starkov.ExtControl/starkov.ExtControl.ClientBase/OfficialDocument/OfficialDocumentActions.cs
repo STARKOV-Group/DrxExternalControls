@@ -9,7 +9,7 @@ namespace starkov.ExtControl.Client
 {
   partial class OfficialDocumentActions
   {
-    public virtual void PlaceStampstarkov(Sungero.Domain.Client.ExecuteActionArgs e)
+    public virtual void ConvertToPDFstarkov(Sungero.Domain.Client.ExecuteActionArgs e)
     {
       var version = _obj.LastVersion;
       if (version == null)
@@ -27,17 +27,21 @@ namespace starkov.ExtControl.Client
       Functions.OfficialDocument.Remote.PlaceStampByCoords(_obj);
     }
 
-    public virtual bool CanPlaceStampstarkov(Sungero.Domain.Client.CanExecuteActionArgs e)
+    public virtual bool CanConvertToPDFstarkov(Sungero.Domain.Client.CanExecuteActionArgs e)
     {
       return !_obj.State.IsInserted && _obj.AccessRights.CanUpdate();
     }
 
-    public virtual void ShowStampstarkov(Sungero.Domain.Client.ExecuteActionArgs e)
+    public virtual void AddStampstarkov(Sungero.Domain.Client.ExecuteActionArgs e)
     {
-      Functions.OfficialDocument.Remote.FillStampHtml(_obj);
+      var dialog = Dialogs.CreateInputDialog("Добавление штампа");
+      var pageNumField = dialog.AddSelect("Номер страницы", true).From(Enumerable.Range(1, Common.PublicFunctions.Module.GetDocumentPageCount(_obj.Id)).Select(_ => _.ToString()).ToArray());
+      var recipientField = dialog.AddSelect("Подписывающий", true, Sungero.CoreEntities.Recipients.Null);
+      if (dialog.Show() == DialogButtons.Ok)
+        Functions.OfficialDocument.Remote.FillStampHtml(_obj, Int32.Parse(pageNumField.Value), recipientField.Value);
     }
 
-    public virtual bool CanShowStampstarkov(Sungero.Domain.Client.CanExecuteActionArgs e)
+    public virtual bool CanAddStampstarkov(Sungero.Domain.Client.CanExecuteActionArgs e)
     {
       return !_obj.State.IsInserted && _obj.AccessRights.CanUpdate();
     }

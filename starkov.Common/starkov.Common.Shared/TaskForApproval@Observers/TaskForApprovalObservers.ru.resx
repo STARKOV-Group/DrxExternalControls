@@ -58,37 +58,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Property_StampInfostarkov" xml:space="preserve">
-    <value>Информация о штампе</value>
-  </data>
-  <data name="Action_AddStampstarkov" xml:space="preserve">
-    <value>Добавить штамп</value>
-  </data>
-  <data name="Action_AddStampstarkovHint" xml:space="preserve">
-    <value>Добавить штамп</value>
-  </data>
-  <data name="Action_AddStampstarkovDescription" xml:space="preserve">
-    <value>Добавить штамп</value>
-  </data>
-  <data name="Action_ConvertToPDFstarkov" xml:space="preserve">
-    <value>Преобразовать в PDF</value>
-  </data>
-  <data name="Action_ConvertToPDFstarkovHint" xml:space="preserve">
-    <value>Преобразовать в PDF</value>
-  </data>
-  <data name="Action_ConvertToPDFstarkovDescription" xml:space="preserve">
-    <value>Преобразовать в PDF</value>
-  </data>
-  <data name="Ribbon_Stamp_1f3e52ed2cb744bf8f9ae869d22b08c5" xml:space="preserve">
-    <value>Штамп</value>
-  </data>
-  <data name="Ribbon_StampGroup_b30ff61f69a54948973d02e032cfaaf5" xml:space="preserve">
-    <value>Штампы</value>
-  </data>
-  <data name="Form_fc02fa2fd3c94288813fd940842b34be" xml:space="preserve">
-    <value>Штампы</value>
-  </data>
-  <data name="ControlGroup_b80f429b920941119050c8a284981a7f" xml:space="preserve">
-    <value>Основная группа</value>
-  </data>
 </root>

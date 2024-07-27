@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RouteScheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             HandlerClassName="starkov.Common.Server.TaskForApprovalRouteHandlers, starkov.Common.Server"
+             VendorDevelopmentVersion="">
+  <Blocks>
+    <BlockBase xsi:type="StartBlock">
+      <Id>1</Id>
+    </BlockBase>
+    <BlockBase xsi:type="FinishBlock">
+      <Id>2</Id>
+    </BlockBase>
+  </Blocks>
+  <Edges>
+    <Edge>
+      <Id>1</Id>
+      <Source>1</Source>
+      <Target>2</Target>
+    </Edge>
+  </Edges>
+</RouteScheme>

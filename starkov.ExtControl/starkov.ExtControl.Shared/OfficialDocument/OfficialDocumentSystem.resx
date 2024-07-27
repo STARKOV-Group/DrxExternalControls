@@ -61,34 +61,34 @@
   <data name="Property_StampInfostarkov" xml:space="preserve">
     <value>Stamp info</value>
   </data>
-  <data name="Action_ShowStampstarkov" xml:space="preserve">
-    <value>Show stamp</value>
+  <data name="Action_AddStampstarkov" xml:space="preserve">
+    <value>Add stamp</value>
   </data>
-  <data name="Action_ShowStampstarkovDescription" xml:space="preserve">
-    <value>Show stamp</value>
+  <data name="Action_AddStampstarkovDescription" xml:space="preserve">
+    <value>Add stamp</value>
   </data>
-  <data name="Action_ShowStampstarkovHint" xml:space="preserve">
-    <value>Show stamp</value>
+  <data name="Action_AddStampstarkovHint" xml:space="preserve">
+    <value>Add stamp</value>
   </data>
-  <data name="Action_ShowStampstarkovConfirmationMessage" xml:space="preserve">
+  <data name="Action_AddStampstarkovConfirmationMessage" xml:space="preserve">
     <value />
   </data>
-  <data name="Action_ShowStampstarkovConfirmationDescription" xml:space="preserve">
+  <data name="Action_AddStampstarkovConfirmationDescription" xml:space="preserve">
     <value />
   </data>
-  <data name="Action_PlaceStampstarkov" xml:space="preserve">
-    <value>Place stamp</value>
+  <data name="Action_ConvertToPDFstarkov" xml:space="preserve">
+    <value>Convert to PDF</value>
   </data>
-  <data name="Action_PlaceStampstarkovDescription" xml:space="preserve">
-    <value>Place stamp</value>
+  <data name="Action_ConvertToPDFstarkovDescription" xml:space="preserve">
+    <value>Convert to PDF</value>
   </data>
-  <data name="Action_PlaceStampstarkovHint" xml:space="preserve">
-    <value>Place stamp</value>
+  <data name="Action_ConvertToPDFstarkovHint" xml:space="preserve">
+    <value>Convert to PDF</value>
   </data>
-  <data name="Action_PlaceStampstarkovConfirmationMessage" xml:space="preserve">
+  <data name="Action_ConvertToPDFstarkovConfirmationMessage" xml:space="preserve">
     <value />
   </data>
-  <data name="Action_PlaceStampstarkovConfirmationDescription" xml:space="preserve">
+  <data name="Action_ConvertToPDFstarkovConfirmationDescription" xml:space="preserve">
     <value />
   </data>
   <data name="Ribbon_Stamp_1f3e52ed2cb744bf8f9ae869d22b08c5" xml:space="preserve">

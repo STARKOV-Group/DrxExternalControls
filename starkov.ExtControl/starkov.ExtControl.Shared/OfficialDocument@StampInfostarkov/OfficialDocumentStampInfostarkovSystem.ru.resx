@@ -70,4 +70,7 @@
   <data name="Property_StampHtml" xml:space="preserve">
     <value>Штамп в виде строки Html</value>
   </data>
+  <data name="Property_Signer" xml:space="preserve">
+    <value>Подписывающий</value>
+  </data>
 </root>

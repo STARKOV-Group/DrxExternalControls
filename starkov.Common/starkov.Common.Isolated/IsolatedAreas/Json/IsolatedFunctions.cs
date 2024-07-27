@@ -32,7 +32,7 @@ namespace starkov.Common.Isolated.Json
       if (string.IsNullOrEmpty(jsonData))
         return null;
       
-      return JsonConvert.DeserializeObject<IPageInfo>(jsonData);
+      return JsonConvert.DeserializeObject<PageInfo>(jsonData);
     }
   }
 }

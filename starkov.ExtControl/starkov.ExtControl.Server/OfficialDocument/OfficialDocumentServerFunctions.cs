@@ -16,23 +16,23 @@ namespace starkov.ExtControl.Server
     [Remote]
     public virtual void PlaceStampByCoords()
     {
-      var version = _obj.LastVersion;
-      var stampInfo = _obj.StampInfostarkov.FirstOrDefault();
-      if (version == null || stampInfo == null)
-        return;
-      
-      using (var bodyStream = version.Body.Read())
-        using (var pdfStream = Sungero.Docflow.IsolatedFunctions.PdfConverter.GeneratePdf(bodyStream, version.BodyAssociatedApplication.Extension))
-          using (var publicBodyStream = Common.IsolatedFunctions.WorkWithAspose.AddStampByCoords(pdfStream,
-                                                                                                 stampInfo.StampHtml,
-                                                                                                 1,
-                                                                                                 stampInfo.CoordX.GetValueOrDefault(),
-                                                                                                 stampInfo.CoordY.GetValueOrDefault()))
-      {
-        version.PublicBody.Write(publicBodyStream);
-        version.AssociatedApplication = Sungero.Content.AssociatedApplications.GetByExtension("pdf");
-        _obj.Save();
-      }
+//      var version = _obj.LastVersion;
+//      var stampInfo = _obj.StampInfostarkov.FirstOrDefault();
+//      if (version == null || stampInfo == null)
+//        return;
+//      
+//      using (var bodyStream = version.Body.Read())
+//        using (var pdfStream = Sungero.Docflow.IsolatedFunctions.PdfConverter.GeneratePdf(bodyStream, version.BodyAssociatedApplication.Extension))
+//          using (var publicBodyStream = Common.IsolatedFunctions.WorkWithAspose.AddStampsByCoords(pdfStream,
+//                                                                                                 stampInfo.StampHtml,
+//                                                                                                 1,
+//                                                                                                 stampInfo.CoordX.GetValueOrDefault(),
+//                                                                                                 stampInfo.CoordY.GetValueOrDefault()))
+//      {
+//        version.PublicBody.Write(publicBodyStream);
+//        version.AssociatedApplication = Sungero.Content.AssociatedApplications.GetByExtension("pdf");
+//        _obj.Save();
+//      }
     }
     
     /// <summary>

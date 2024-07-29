@@ -73,4 +73,7 @@
   <data name="AttachmentGroup_DocumentGroupTitle" xml:space="preserve">
     <value>Документ</value>
   </data>
+  <data name="Block_ea3d55910f9240c9abb87b685a74bc2b_Property_c85b55cb1e104f738c6ffec341e50208" xml:space="preserve">
+    <value>Только подписи с результатом "Утверждено"</value>
+  </data>
 </root>

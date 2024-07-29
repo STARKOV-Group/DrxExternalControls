@@ -55,8 +55,8 @@
   "IsolatedAssemblyName": "starkov.Common.Isolated",
   "IsolatedFunctions": [
     {
-      "NameGuid": "0d053731-bbcc-4f4c-8f64-c16504f98d36",
-      "Name": "AddStampByCoords",
+      "NameGuid": "041a48e6-0a44-48cb-8e87-4fcf161739e4",
+      "Name": "AddStampsByCoords",
       "IsolatedAreaId": "4efc5867-55dc-40fe-beff-01085a4b521a",
       "Parameters": [
         {
@@ -65,24 +65,9 @@
           "ParameterTypeFullName": "System.IO.Stream"
         },
         {
-          "Name": "htmlStamp",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "pageNumber",
-          "ParameterType": "global::System.Int32",
-          "ParameterTypeFullName": "System.Int32"
-        },
-        {
-          "Name": "x",
-          "ParameterType": "global::System.Double",
-          "ParameterTypeFullName": "System.Double"
-        },
-        {
-          "Name": "y",
-          "ParameterType": "global::System.Double",
-          "ParameterTypeFullName": "System.Double"
+          "Name": "stampInfos",
+          "ParameterType": "global::System.Collections.Generic.List<global::starkov.Common.Structures.Module.IStampInfo>",
+          "ParameterTypeFullName": "System.Collections.Generic.List`1[[starkov.Common.Structures.Module.IStampInfo, Sungero.Domain.Interfaces]]"
         }
       ],
       "ReturnType": "global::System.IO.Stream",
@@ -216,6 +201,31 @@
         {
           "Name": "IsLandscape",
           "TypeFullName": "global::System.Boolean"
+        }
+      ],
+      "StructureNamespace": "starkov.Common.Structures.Module"
+    },
+    {
+      "Name": "StampInfo",
+      "IsIsolated": true,
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "HtmlStamp",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "PageNumber",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "X",
+          "TypeFullName": "global::System.Double"
+        },
+        {
+          "Name": "Y",
+          "TypeFullName": "global::System.Double"
         }
       ],
       "StructureNamespace": "starkov.Common.Structures.Module"

@@ -28,6 +28,14 @@
       "BaseGuid": "1f76cc5d-f096-4062-b34a-51b3c02269f2",
       "HandledEvents": [
         "PlaceStampExecute"
+      ],
+      "Properties": [
+        {
+          "$type": "Sungero.Metadata.BooleanBlockPropertyMetadata, Sungero.Metadata",
+          "NameGuid": "c85b55cb-1e10-4f73-8c6f-fec341e50208",
+          "Name": "OnlyApproval",
+          "PreviousPropertyGuid": "5dc92a72-3a65-4872-bc04-0aa7ec353b05"
+        }
       ]
     }
   ],

@@ -133,23 +133,39 @@ namespace starkov.Common.Isolated.WorkWithAspose
     /// <param name="y">Координата y.</param>
     /// <returns>Поток с документом.</returns>
     [Public]
-    public virtual Stream AddStampByCoords(Stream inputStream, string htmlStamp, int pageNumber, double x, double y)
+    public virtual Stream AddStampsByCoords(Stream inputStream, List<Structures.Module.IStampInfo> stampInfos)
     {
+      // Создание нового потока, в который будет записан документ с отметкой (во входной поток записывать нельзя).
+      var outputStream = new MemoryStream();
       try
       {
-        var document = new Aspose.Pdf.Document(inputStream);
-        var info = new Aspose.Pdf.Facades.PdfFileInfo(document);
-        var stamp = CreateStampFromHtml(htmlStamp);
-        var page = document.Pages[pageNumber];
-        stamp.XIndent = x;
-        stamp.YIndent = info.GetPageHeight(page.Number) - y - stamp.Height;
-        page.Dispose();
-        return AddStampToDocumentPage(inputStream, pageNumber, stamp);
+        inputStream.CopyTo(outputStream);
+        var document = new Aspose.Pdf.Document(outputStream);
+        // Поднимаем версию и переполучаем документ из потока, чтобы гарантировать читаемость штампа после вставки.
+        outputStream = GetUpgradedPdf(document);
+        foreach (var stampInfo in stampInfos)
+        {
+          document = new Aspose.Pdf.Document(outputStream);
+          var info = new Aspose.Pdf.Facades.PdfFileInfo(document);
+          var stamp = CreateStampFromHtml(stampInfo.HtmlStamp);
+          var page = document.Pages[stampInfo.PageNumber];
+          stamp.XIndent = stampInfo.X;
+          stamp.YIndent = info.GetPageHeight(page.Number) - stampInfo.Y - stamp.Height;
+          AddStampToDocumentPage(outputStream, document, page, stampInfo.PageNumber, stamp);
+          page.Dispose();
+        }
+        
+        return outputStream;
       }
       catch (Exception ex)
       {
+        outputStream.Dispose();
         Logger.Error("Cannot add stamp by coords", ex);
         throw new AppliedCodeException("Cannot add stamp by coords");
+      }
+      finally
+      {
+        inputStream.Dispose();
       }
     }
     
@@ -192,46 +208,34 @@ namespace starkov.Common.Isolated.WorkWithAspose
     /// Добавить отметку на страницу документа.
     /// </summary>
     /// <param name="inputStream">Поток с входным документом.</param>
+    /// <param name="document">Pdf документ.</param>
+    /// <param name="documentPage">Pdf страница.</param>
     /// <param name="pageNumber">Номер страницы документа, на которую нужно проставить отметку.</param>
     /// <param name="stamp">Отметка.</param>
     /// <returns>Страница документа с отметкой.</returns>
-    public virtual Stream AddStampToDocumentPage(Stream inputStream, int pageNumber, Aspose.Pdf.PdfPageStamp stamp)
+    public virtual void AddStampToDocumentPage(Stream inputStream,
+                                               Aspose.Pdf.Document document,
+                                               Aspose.Pdf.Page documentPage,
+                                               int pageNumber,
+                                               Aspose.Pdf.PdfPageStamp stamp)
     {
-      // Создание нового потока, в который будет записан документ с отметкой (во входной поток записывать нельзя).
-      var outputStream = new MemoryStream();
       try
       {
-        var document = new Aspose.Pdf.Document(inputStream);
-        // Поднимаем версию и переполучаем документ из потока,
-        // чтобы гарантировать читаемость штампа после вставки.
-        using (var documentStream = GetUpgradedPdf(document))
+        var rectConsiderRotation = documentPage.GetPageRect(true);
+        if (stamp.Width > rectConsiderRotation.Width || stamp.Width > (rectConsiderRotation.Height - 20))
         {
-          document = new Aspose.Pdf.Document(documentStream);
-
-          var documentPage = document.Pages[pageNumber];
-          var rectConsiderRotation = documentPage.GetPageRect(true);
-          if (stamp.Width > rectConsiderRotation.Width || stamp.Width > (rectConsiderRotation.Height - 20))
-          {
-            inputStream.CopyTo(outputStream);
-          }
-          else
-          {
-            documentPage.AddStamp(stamp);
-            document.Save(outputStream);
-          }
+          return;
         }
-        
-        return outputStream;
+        else
+        {
+          documentPage.AddStamp(stamp);
+          document.Save(inputStream);
+        }
       }
       catch (Exception ex)
       {
-        outputStream.Dispose();
         Logger.Error("Cannot add stamp to document page", ex);
         throw new AppliedCodeException("Cannot add stamp to document page");
-      }
-      finally
-      {
-        inputStream.Close();
       }
     }
 
@@ -244,7 +248,7 @@ namespace starkov.Common.Isolated.WorkWithAspose
     /// В Adobe Reader такие документы либо не открываются совсем, либо отображаются некорректно.
     /// Для корректного отображения отметки pdf-документ будет сконвертирован до версии pdf 1.4.
     /// Документы в формате pdf/a не конвертируем, т.к. формат основан на версии pdf 1.4 и не требует конвертации.</remarks>
-    public Stream GetUpgradedPdf(Aspose.Pdf.Document document)
+    public MemoryStream GetUpgradedPdf(Aspose.Pdf.Document document)
     {
       if (!document.IsPdfaCompliant)
       {

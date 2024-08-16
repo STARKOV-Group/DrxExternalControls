@@ -9,8 +9,8 @@
       "Name": "AddStampstarkov",
       "ActionArea": "Card",
       "GenerateHandler": true,
-      "LargeIconName": null,
-      "SmallIconName": null
+      "LargeIconName": "Action_AddStampstarkov_large_07e76c4190f54901bb26c4ad42dc809f.png",
+      "SmallIconName": "Action_AddStampstarkov_small_07e76c4190f54901bb26c4ad42dc809f.png"
     },
     {
       "NameGuid": "ca67464a-3f84-431a-812a-b7fbed386dfe",
@@ -166,10 +166,10 @@
       {
         "NameGuid": "b30ff61f-69a5-4948-973d-02e032cfaaf5",
         "Name": "StampGroup",
-        "IconName": null,
+        "IconName": "Ribbon_StampGroup_b30ff61f69a54948973d02e032cfaaf5.png",
         "Index": 0,
         "ParentGuid": "1f3e52ed-2cb7-44bf-8f9a-e869d22b08c5",
-        "SmallIconName": null
+        "SmallIconName": "Ribbon_StampGroup_small_b30ff61f69a54948973d02e032cfaaf5.png"
       }
     ],
     "IsAncestorMetadata": true,
@@ -177,7 +177,7 @@
       {
         "NameGuid": "1f3e52ed-2cb7-44bf-8f9a-e869d22b08c5",
         "Name": "Stamp",
-        "Index": 32,
+        "Index": 21,
         "ParentGuid": "ab56c73d-5e95-4014-b359-86c97643f13c"
       }
     ],
